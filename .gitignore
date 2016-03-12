@@ -1,0 +1,6 @@
+Makefile
+*.aux
+*.blg
+*.out
+*.bbl
+*.log
