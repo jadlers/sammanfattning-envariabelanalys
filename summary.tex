@@ -8,6 +8,17 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 
+\newcommand\varpm{\mathbin{\vcenter{\hbox{%
+  \oalign{\hfil$\scriptstyle+$\hfil\cr
+          \noalign{\kern-.3ex}
+          $\scriptscriptstyle({-})$\cr}%
+}}}}
+\newcommand\varmp{\mathbin{\vcenter{\hbox{%
+  \oalign{$\scriptstyle({+})$\cr
+          \noalign{\kern-.3ex}
+          \hfil$\scriptscriptstyle-$\hfil\cr}%
+}}}}
+
 \begin{document}
 
 \maketitle
@@ -55,5 +66,50 @@ Om $f(x)$ är kontinuerlig på ett slutet och begränsat intervall  $[a,b]$ då 
 
 \subsection{Sats om mellanliggande värden}
 Om $f(x)$ är kontinuerlig på $[a,b]$ och om $s$ ligger mellan $f(a)$ och $f(b)$ då finns det ett $x\in [a,b]$ sådant att $f(x)=s$
+
+% #### DERIVATA ####
+\section{Derivata}
+\subsection{Definition}
+Vi säger att derivatan av en funktion $f(x)$ ges av $\lim\limits_{h\to  0}\frac{f(x+h)-f(x)}{h}$ om gränsvärdet existerar.
+
+\subsection{Definition}
+Om $f(x)$ är deriverbar i punkten $x_{0}$ så är linjen $y=f'(x_{0})(x-x_{0})+f(x_{0})$ tangenten till $f(x)$ i $x_{0}$.
+
+\subsection{Sats}
+Om $f(x)$ och $g(x)$ är deriverbara så gäller följande:
+
+\begin{enumerate}
+   \item $D(f(x)\varpm g(x))$ (Summaregeln)
+   \item $D(f(x)g(x))=f'(x)g(x)+f(x)g'(x)$ (Produktregeln)
+   \item $D(\frac{f(x)}{g(x)})=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$ (Kvotregeln) Om $g(x)\neq 0$
+\end{enumerate}
+
+\subsection{Sats}
+Om en funktion $g(x)$ är deriverbar i $x_{0}$ så är $g(x)$ kontinuerlig i $x_{0}$. Alltså,\\
+$g(x)$ deriverbar $\Rightarrow g(x)$ kontinuerlig.
+
+\subsection{Sats}
+\begin{enumerate}
+   \item $Dx=1$
+   \item $Dx^r=rx^{r-1} \quad r \in \mathcal{R}$
+   \item $D\sin(x)=\cos(x)$
+   \item $D\cos(x)=-\sin(x)$
+\end{enumerate}
+
+\subsection{Definition}
+Om $f(x)$ är en funktion definerad på ett intervall $I$ så säger vi att $f(x)$ är:
+
+\begin{enumerate}
+   \item Strängt växande på $I$ om $\forall x_{1},x_{2}\in I \quad x_{2}>x_{1} \Rightarrow f(x_{2})>f(x_{1})$
+   \item Växande på $I$ om $\forall x_{1},x_{2}\in I \quad x_{2}>x_{1} \Rightarrow f(x_{2})\geq f(x_{1})$
+   \item Strängt avtagande på $I$ om $\forall x_{1},x_{2}\in I \quad x_{2}>x_{1} \Rightarrow f(x_{2})<f(x_{1})$
+   \item Avtagande på $I$ om $\forall x_{1},x_{2}\in I \quad x_{2}>x_{1} \Rightarrow f(x_{2})\leq f(x_{1})$
+\end{enumerate}
+
+\subsection{Medelvärdessatsen}
+Om $f(x)$ är kontinuerlig på ett intervall $[a,b]$ och $f(x)$ är deriverbar på $(a,b)$ då finns en punkt $c\in (a,b)$ så att: $\frac{f(b)-f(a)}{b-a}=f'(c)$
+
+\subsection{Följdsats till medelvärdessatsen}
+Antag att $f'(x)>0$ på $(a,b)$. Då är $f(x)$ strängt växande på samma intervall.
 
 \end{document}
