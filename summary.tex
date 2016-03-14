@@ -121,4 +121,53 @@ Om $f(x)$ är kontinuerlig på ett intervall $[a,b]$ och $f(x)$ är deriverbar p
 \subsection{Följdsats till medelvärdessatsen}
 Antag att $f'(x)>0$ på $(a,b)$. Då är $f(x)$ strängt växande på samma intervall.
 
+\newpage
+\section{Differentialekvationer}
+\subsection{Definition}
+Vi säger att $y_{h}(x)$ är en homogen lösning om $y''_{h}(x)+ay'_{h}(x)+by_{h}(x)=0$
+
+\subsection{Definition}
+Vi säger att $y_{p}(x)$ är en partikulärlösning till $y''(x)+ay'(x)+by(x)=f(x)$ om $y_{p}(x)$ är någon funktion som uppfyller ekvationen.
+
+\subsection{Lösningsstrategi}
+$y''(x)+ay'(x)+by(x)=f(x),\quad y(x_{0})=\alpha,\quad y'(x_{0})=\beta$
+\begin{enumerate}
+   \item Hitta alla homogena lösningar $y_{h}(x)$
+   \begin{enumerate}
+      \item Hitta rötterna till det karakteristiska polynomet\\
+      $r^2+ar+b=0\Rightarrow r_{1},r_{2}=-\frac{a}{2}\pm \sqrt{(\frac{a}{2})^2-b}$
+      \item
+      \begin{enumerate}
+         \item Om $r_{1}\neq r_{2}$ och $r_{1},r_{2}\in\mathcal{R}$ då är:\\
+         $y_{h}(x)=Ce^{r_{1}x}+De^{r_{2}x}$ för några $C,D\in\mathcal{R}$
+         \item Om $r_{1}=r_{2}$ och $r_{1},r_{2}\in\mathcal{R}$ då är:\\
+         $y_{h}(x)=Cxe^{r_{1}x}+De^{r_{1}x}$ för några $C,D\in\mathcal{R}$
+         \item Om $r_{1},r_{2}=k\pm i\omega$ då är:\\
+         $y_{h}(x)=Ce^{kx}\sin(\omega x)+De^{kx}\cos(\omega x)$ för några $C,D\in\mathcal{R}$
+      \end{enumerate}
+   \end{enumerate}
+   \item Om $f(x)\neq 0$ gissa en partikulärlösning enligt tabellen och bekräfta den.
+   \begin{table}[!h]
+   \centering
+   \begin{tabular}{|r|l|}
+   \hline
+   $f(x)$                            & Gissning av $y_{p}$                                         \\ \hline
+   Konstant                          & $y_{p}=$ Konstant                                            \\ \hline
+   Polynom                           & $y_{p}=$ Polynom av samma grad                               \\ \hline
+   $e^{\lambda x}$                   & $y_{p}=Ae^{\lambda x}$                                      \\ \hline
+   $e^{\mu x}\sin(\lambda x)$ eller $e^{\mu x}\cos(\lambda x)$        & $y_{p}=Ae^{\mu x}\sin(\lambda x)+Be^{\mu x}\cos(\lambda x)$ \\ \hline
+   \end{tabular}
+   \end{table}
+
+   Om gissningen är en homogen lösning så multiplicera den partikulära lösningen med $x$ alternativt $x^2$ om multiplikation med $x$ också är en homogen lösning. Kombination av $f(x)$ ger kombination av gissningar enligt tabellen ovan.
+   \item Ansätt $y(x)=y_{h}(x)(+y_{p}(x))$ och beräkna $C$ och $D$ genom att använda initialdatan. Vi får då ett linjärt ekvationsystem på formen:\\
+   $\left\{
+   \begin{array}{l}
+       y(x_{0})=\alpha \\
+       y'(x_{0})=\beta
+   \end{array}
+   \right.$
+\end{enumerate}
+\newpage
+
 \end{document}
