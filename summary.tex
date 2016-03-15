@@ -201,4 +201,42 @@ Antag att $f(x)$ är kontinuerlig på ett intervall $I$ (öppet eller slutet) oc
 \subsection{Definition}
 Ytan mellan $f(x)$ och $g(x)$ då $a\leq x\leq b$ ges av $\int_{a}^{b} |f(x)-g(x)|dx$
 
+\section{Integrationsmetoder}
+\subsection{Variabelsubstitution}
+\subsubsection{Förklaring}
+Om $F(x)$ är en primitiv till $f(x)$ och $g(x)$ är deriverbar. Då kommer $F(g(x))$ vara en primitiv funktion till $f(g(x))g'(x)$. Variabelsubstitution används för att beräkna integraler på form $\int_{a}^{b}f(g(x))g'(x)dx=F(g(x))\bigg\vert_{a}^{b}$
+
+\subsubsection{Exempel}
+${\displaystyle \int_{1}^{2}\frac{x}{(x^2+4)^2}dx = \frac{1}{2}\int_{1}^{2}\frac{2x}{(x^2+4)^2}dx = \left\{
+\begin{array}{l}
+    f(x) = \frac{1}{x^2}   \\
+    g(x) = x^2+4           \\
+    g'(x)= 2x
+\end{array}
+\right\} = \left\{
+\begin{array}{l}
+    t=x^2+4,\quad dt=2xdx \\
+    x=1 \Rightarrow t=5 \\
+    x=2 \Rightarrow t=8
+\end{array}
+\right\}}$ \\
+${\displaystyle= \frac{1}{2}\int_{5}^{8}\frac{1}{t^2}dt = \frac{1}{2}(-\frac{1}{t})\bigg\vert_{5}^{8}=-\frac{1}{2}\frac{1}{8}+\frac{1}{2}\frac{1}{5}=\frac{1}{10}-\frac{1}{16}=\frac{8}{80}-\frac{5}{80}=\frac{3}{80}}$
+
+\subsection{Partiell integration}
+\subsubsection{Förklaring}
+Partiell integration följer av derivatans produktregel. Enligt produktregeln så ska $D(f(x)g(x))=f'(x)g(x)+f(x)g'(x)$. Hittar vi sedan den primitiva funktionen till $f(x)g(x)=\int f'(x)g(x)dx + \int f(x)g'(x)dx$ som kan skrivas om till:\\
+$\int_{a}^{b}f(x)g(x)dx=f(x)G(x)\bigg\vert_{a}^{b} - \int_{a}^{b}f'(x)G(x)dx$
+
+\subsubsection{Exempel}
+${\displaystyle \int_{0}^{\frac{\pi}{2}}x\sin(x)dx=\left\{\begin{array}{l}
+   f(x)=x   \\
+   g(x)=sin(x)
+\end{array}
+\right\} = x \cdot-\cos(x)\bigg\vert_{0}^{\frac{\pi}{2}} + \int_{0}^{\frac{\pi}{2}}\cos(x)dx}$ \\
+$= -x\cos(x)\bigg\vert_{0}^{\frac{\pi}{2}} + \sin(x)\bigg\vert_{0}^{\frac{\pi}{2}} = \sin(x)\bigg\vert_{0}^{\frac{\pi}{2}}=1$
+
+\subsection{Partialbråksuppdelning}
+\subsubsection{Förklaring}
+\subsubsection{Exempel}
+
 \end{document}
