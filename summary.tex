@@ -183,4 +183,19 @@ $P_{n}(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(
 \subsection{Taylors sats}
 Om $f(x)$ är $(n+1)$ gånger deriverbar i något öppet intervall kring $a$ och $P_{n}$ är Taylorpolynomet i $a$. Då gäller att $f(x)-P_{n}(x)=\frac{f^{n+1}(s)}{(n+1)!}(x-a)^{(n+1)}$ för något $s$ mellan $a$ och $x$.
 
+\section{Integraler}
+\subsection{Definition}
+Om det finns exakt ett tal $I$ sådant att $\exists f(x)$ definerad på $[a,b]$, för varje indelning $p$ säger vi att:\\
+$L(f,p)\leq I \leq U(f,p) \Rightarrow \int_{a}^{b}f(x)dx$
+
+\subsection{Sats}
+Om $f(x)$ är kontinuerlig på $[a,b]$ så är $f(x)$ integrerbar, dvs $\int_{a}^{b}f(x)dx$ existerar.
+
+\subsection{Analysens huvudsats}
+Antag att $f(x)$ är kontinuerlig på ett intervall $I$ (öppet eller slutet) och $a\in I$. Då:
+\begin{enumerate}
+   \item Om $F(x)=\int_{a}^{x}f(t)dt$ så kommer $F'(x)=f(x)\quad \forall x\in I$
+   \item Om $G(x)$ är en primitiv funktion till $f(x)$, dvs ($G'(x)=f(x)$), och $b\in I$ så kommer $\int_{a}^{b}f(x)dx=G(b)-G(a)$
+\end{enumerate}
+
 \end{document}
