@@ -186,25 +186,25 @@ Om $f(x)$ är $(n+1)$ gånger deriverbar i något öppet intervall kring $a$ och
 \section{Integraler}
 \subsection{Definition}
 Om det finns exakt ett tal $I$ sådant att $\exists f(x)$ definerad på $[a,b]$, för varje indelning $p$ säger vi att:\\
-$L(f,p)\leq I \leq U(f,p) \Rightarrow \int_{a}^{b}f(x)dx$
+${\displaystyle L(f,p)\leq I \leq U(f,p) \Rightarrow \int_{a}^{b}f(x)dx}$
 
 \subsection{Sats}
-Om $f(x)$ är kontinuerlig på $[a,b]$ så är $f(x)$ integrerbar, dvs $\int_{a}^{b}f(x)dx$ existerar.
+Om $f(x)$ är kontinuerlig på $[a,b]$ så är $f(x)$ integrerbar, dvs ${\displaystyle\int_{a}^{b}f(x)dx}$ existerar.
 
 \subsection{Analysens huvudsats}
 Antag att $f(x)$ är kontinuerlig på ett intervall $I$ (öppet eller slutet) och $a\in I$. Då:
 \begin{enumerate}
-   \item Om $F(x)=\int_{a}^{x}f(t)dt$ så kommer $F'(x)=f(x)\quad \forall x\in I$
-   \item Om $G(x)$ är en primitiv funktion till $f(x)$, dvs ($G'(x)=f(x)$), och $b\in I$ så kommer $\int_{a}^{b}f(x)dx=G(b)-G(a)$
+   \item Om ${\displaystyle F(x)=\int_{a}^{x}f(t)dt}$ så kommer $F'(x)=f(x)\quad \forall x\in I$
+   \item Om $G(x)$ är en primitiv funktion till $f(x)$, dvs ($G'(x)=f(x)$), och $b\in I$ så kommer ${\displaystyle\int_{a}^{b}f(x)dx=G(b)-G(a)}$
 \end{enumerate}
 
 \subsection{Definition}
-Ytan mellan $f(x)$ och $g(x)$ då $a\leq x\leq b$ ges av $\int_{a}^{b} |f(x)-g(x)|dx$
+Ytan mellan $f(x)$ och $g(x)$ då $a\leq x\leq b$ ges av ${\displaystyle \int_{a}^{b} |f(x)-g(x)|dx}$
 
 \section{Integrationsmetoder}
 \subsection{Variabelsubstitution}
 \subsubsection{Förklaring}
-Om $F(x)$ är en primitiv till $f(x)$ och $g(x)$ är deriverbar. Då kommer $F(g(x))$ vara en primitiv funktion till $f(g(x))g'(x)$. Variabelsubstitution används för att beräkna integraler på form $\int_{a}^{b}f(g(x))g'(x)dx=F(g(x))\bigg\vert_{a}^{b}$
+Om $F(x)$ är en primitiv till $f(x)$ och $g(x)$ är deriverbar. Då kommer $F(g(x))$ vara en primitiv funktion till $f(g(x))g'(x)$. Variabelsubstitution används för att beräkna integraler på form ${\displaystyle\int_{a}^{b}f(g(x))g'(x)dx=F(g(x))\bigg\vert_{a}^{b}}$
 
 \subsubsection{Exempel}
 ${\displaystyle \int_{1}^{2}\frac{x}{(x^2+4)^2}dx = \frac{1}{2}\int_{1}^{2}\frac{2x}{(x^2+4)^2}dx = \left\{
@@ -224,8 +224,8 @@ ${\displaystyle= \frac{1}{2}\int_{5}^{8}\frac{1}{t^2}dt = \frac{1}{2}(-\frac{1}{
 
 \subsection{Partiell integration}
 \subsubsection{Förklaring}
-Partiell integration följer av derivatans produktregel. Enligt produktregeln så ska $D(f(x)g(x))=f'(x)g(x)+f(x)g'(x)$. Hittar vi sedan den primitiva funktionen till $f(x)g(x)=\int f'(x)g(x)dx + \int f(x)g'(x)dx$ som kan skrivas om till:\\
-$\int_{a}^{b}f(x)g(x)dx=f(x)G(x)\bigg\vert_{a}^{b} - \int_{a}^{b}f'(x)G(x)dx$
+Partiell integration följer av derivatans produktregel. Enligt produktregeln så ska $D(f(x)g(x))=f'(x)g(x)+f(x)g'(x)$. Hittar vi sedan den primitiva funktionen till ${\displaystyle f(x)g(x)=\int f'(x)g(x)dx + \int f(x)g'(x)dx}$ som kan skrivas om till:\\
+${\displaystyle\int_{a}^{b}f(x)g(x)dx=f(x)G(x)\bigg\vert_{a}^{b} - \int_{a}^{b}f'(x)G(x)dx}$
 
 \subsubsection{Exempel}
 ${\displaystyle \int_{0}^{\frac{\pi}{2}}x\sin(x)dx=\left\{\begin{array}{l}
