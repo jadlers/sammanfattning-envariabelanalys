@@ -237,6 +237,29 @@ $= -x\cos(x)\bigg\vert_{0}^{\frac{\pi}{2}} + \sin(x)\bigg\vert_{0}^{\frac{\pi}{2
 
 \subsection{Partialbråksuppdelning}
 \subsubsection{Förklaring}
+Partialbråksuppdelning är en metod för att integrera ${\displaystyle\int_{a}^{b}\frac{p(x)}{q(x)}dx }$ då $p(x)$ och $q(x)$ är polynom.
+\subsection{Strategi}
+\begin{enumerate}
+   \item Reducera problemet till ett problem ${\displaystyle\int_{a}^{b}\frac{p(x)}{q(x)}dx}$ där $\deg(p(x))<\deg(q(x))$
+   \item Faktorisera nämnaren, dvs skriv:\\
+   $q(x)=(x-\alpha_{1})^{k_{1}}\cdot(x-\alpha_{2})^{k_{2}}\cdots(x^2+\beta_{1}x+\gamma_{1})^{l_{1}}\cdot(x^2+\beta_{2}x+\gamma_{2})^{l_{2}}$
+   \item Gör ansättningen:\\
+   $\frac{p(x)}{q(x)}=\frac{a_{1}}{(x-\alpha_{1})}+\frac{a_{2}}{(x-\alpha_{1})^{2}}+\ldots+\frac{ak_{1}}{(x-\alpha_{1})^{k_{1}}}+\ldots+\frac{b_{1}x+c_{1}}{(x^{2}+\beta_{1}+\gamma_{1})}+\frac{b_{2}x+c_{2}}{(x^2+\beta_{1}+\gamma_{1})^{2}}+\ldots+\frac{b_{l_{1}}x+c_{l_{1}}}{(x^2+\beta_{1}+\gamma_{1})^{l_{1}}}$\\
+
+   Alltså om:
+   \begin{table}[!h]
+   \centering
+   \begin{tabular}{|r|l|}
+   \hline
+$q(x)$ har faktorn       & så ska HL innehålla                        \\ \hline
+   ${\displaystyle (x-\alpha)^k}$           & ${\displaystyle \frac{a_{1}}{(x-\alpha)}+\frac{a_{2}}{(x-alpha)^2}+\ldots+\frac{a_{k}}{(x-\alpha)^k}}$                                                          \\ \hline
+   ${\displaystyle(x^2+\beta x+\gamma)^k}$ & ${\displaystyle \frac{b_{1}x+c_{1}}{(x^2+\beta x+\gamma)}+\frac{b_{2}x+c_{2}}{(x^2+\beta x+\gamma)^2}+\ldots+\frac{b_{k}x+c_{k}}{(x^2+\beta x+\gamma)^k}}$  \\ \hline
+   \end{tabular}
+   \end{table}
+   \item Förläng höger led och vänster led med $q(x)$ och beräkna koefficienterna.
+   \item Lös den nya integralen.
+\end{enumerate}
+
 \subsubsection{Exempel}
 
 \end{document}
