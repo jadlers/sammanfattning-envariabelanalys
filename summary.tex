@@ -43,7 +43,7 @@ Om $f(x)$ är en funktion definerad på ett intervall $I$ så säger vi att $f(x
 \end{enumerate}
 
 \subsection{Definition}
-Vi säger att $f(x)$ är injektiv om $f(x_{1})=f(x_{2}\Rightarrow x_{1}=x_{2})$.
+Vi säger att $f(x)$ är injektiv om $f(x_{1})=f(x_{2})\Rightarrow x_{1}=x_{2}$.
 
 \subsection{Sats (Bevis sid 51)}
 $cos(s-t)=cos(s)cos(t)+sin(s)sin(t)$
@@ -57,7 +57,8 @@ Om $p(x)$ är ett polynom och $p(a)=0$ så finns det ett polynom $q(x)$ sådant 
 % #### GRÄNSVÄRDEN ####
 \section{Gränsvärden}
 \subsection{Definition}
-Vi säger att $f(x)$ går mot $L\in \mathcal{R}$ när $x$ går mot oändligheten ($f(x) \to L$ då $x \rightarrow \infty$ $\lim\limits_{x \to\infty} f(x)=L$).\\
+Vi säger att $f(x)$ går mot $L\in \mathcal{R}$ när $x$ går mot oändligheten\\
+$f(x) \to L$ då $x \rightarrow \infty$. Detta skrivs kortare som: $\lim\limits_{x \to\infty} f(x)=L$.\\
 Det gäller om det $\forall\varepsilon>0$ existerar ett $R_{\varepsilon}$ sådant att om $x>R_{\varepsilon}$ så $|f(x)-L|<\varepsilon$
 
 \subsection{Definition}
@@ -99,13 +100,12 @@ Om $f(x)$ är deriverbar i punkten $x_{0}$ så är linjen $y=f'(x_{0})(x-x_{0})+
 
 \subsection{Definition}
 Vi säger att $c$ är ett lokalt max/(min) om det finns $\alpha,\beta$ sådana att:\\ $f(c)\geq f(x)\quad (f(c)\leq f(x)),\quad \forall x \in (\alpha, \beta)$.\\
-(LÄGG IN KOPPLING TILL DERIVATA (föreläsning 12))
 
 \subsection{Sats}
 Om $f(x)$ och $g(x)$ är deriverbara så gäller följande:
 
 \begin{enumerate}
-   \item $D(f(x)\varpm g(x))$ (Summaregeln)
+   \item $D(f(x)\varpm g(x))=D(f(x))\varpm D(g(x))$ (Summaregeln)
    \item $D(f(x)g(x))=f'(x)g(x)+f(x)g'(x)$ (Produktregeln)
    \item $D(\frac{f(x)}{g(x)})=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$ (Kvotregeln) Om $g(x)\neq 0$
 \end{enumerate}
@@ -178,7 +178,7 @@ $y''(x)+ay'(x)+by(x)=f(x),\quad y(x_{0})=\alpha,\quad y'(x_{0})=\beta$
 
 \newpage
 \section{Taylorpolynom}
-Det finns fler satser som leder fram till Taylorpolynomet under föreläsning 12.
+Det finns flera satser som leder fram till Taylorpolynomet under föreläsning 12.
 \subsection{Defintion}
 Om $f(x)$ är $n$ gånger deriverbar i punkten $a$, då är Taylorpolynomet av ordning $n$ till funktionen $f$ i punkten $a$:\\
 $P_{n}(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n$
